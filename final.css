@@ -119,4 +119,37 @@ body {
 
 }
 
+@media(max-width:900px){
+    body {
+        background-size: auto;
+        
+    }
+    #contrainer{
+        width: 60%;
+        
+    }
+
+    .contrainer-baby1-inside{
+        width: 20%;
+       
+    }
+    .headspan {
+        font-size: 25px;
+    }
+    .img img{
+        width: 70px;
+        height: 70px;
+    }
+    .img {
+        width: 20%;
+    }
+   .bt button{
+    font-size: 8.5px;
+    width: 70px;
+   }
+   .bt {
+    margin: 0;
+   }
+ 
+}
 
