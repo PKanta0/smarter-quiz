@@ -184,13 +184,14 @@
             font-style: normal;
 
         }
-
-        .resetScore{
+/* 
+        .resetScore {
             width: 100px;
             height: 100px;
-        }
+        } */
     </style>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 
@@ -231,13 +232,13 @@
 
             <div class="mainchoice">
                 <div class="choice">
-                    <div class="bx a"><button>12</button></div>
-                    <div class="bx b"><button>8</button></div>
+                    <div class="bx"><button class="a">12</button></div>
+                    <div class="bx"><button>8</button></div>
                 </div>
 
                 <div class="choice">
-                    <div class="bx c"><button>24</button></div>
-                    <div class="bx d"><button>18</button></div>
+                    <div class="bx"><button>24</button></div>
+                    <div class="bx"><button>18</button></div>
                 </div>
             </div>
         </div>
@@ -248,9 +249,41 @@
 
     </div>
 
-    <button id="resetScore">Reset Score</button>
+   
 
-    <script src="./final.js"></script>
+    <script>
+
+       let score = parseInt(localStorage.getItem("score")) || 0;
+        document.querySelector(".bar").textContent = `Score ${score} : 5`;
+
+
+        document.querySelectorAll("button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                if (btn.classList.contains("a")) {
+                    score += 1;
+                    localStorage.setItem("score", score);
+                    Swal.fire({
+                        icon: 'success',
+                        title: '✅ Correct!',
+                        text: 'Good job! Let’s go to the next question.',
+                        confirmButtonText: 'Next'
+                    }).then(() => {
+                        window.location.href = 'final2.html'; 
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: '❌ I DONT THINK SO! ❌',
+                        text: 'Do it again!!!'
+                    });
+                }
+            });
+        });
+
+       
+    </script>
+
+    <script src="./quiz.js"></script>
 </body>
 
 </html>

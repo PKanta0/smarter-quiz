@@ -186,6 +186,8 @@
         }
     </style>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 </head>
 
@@ -227,13 +229,13 @@
 
             <div class="mainchoice">
                 <div class="choice">
-                    <div class="bx a"><button>To earn money</button></div>
-                    <div class="bx b"><button>To explore space</button></div>
+                    <div class="bx"><button>To earn money</button></div>
+                    <div class="bx"><button>To explore space</button></div>
                 </div>
 
                 <div class="choice">
-                    <div class="bx c"><button>To keep order and make laws</button></div>
-                    <div class="bx d"><button>To build houses</button></div>
+                    <div class="bx"><button class="a">To keep order and make laws</button></div>
+                    <div class="bx"><button>To build houses</button></div>
                 </div>
             </div>
         </div>
@@ -243,6 +245,38 @@
 
 
     </div>
+
+    <script>
+
+        let score = parseInt(localStorage.getItem("score")) || 0;
+        document.querySelector(".bar").textContent = `Score ${score} : 5`;
+
+
+        document.querySelectorAll("button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                if (btn.classList.contains("a")) {
+                    score += 1;
+                    localStorage.setItem("score", score);
+                    Swal.fire({
+                        icon: 'success',
+                        title: '✅ Correct!',
+                        text: 'Good job! Let’s go to the next question.',
+                        confirmButtonText: 'Next'
+                    }).then(() => {
+                        window.location.href = 'finaso2.html';
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: '❌ I DONT THINK SO! ❌',
+                        text: 'Do it again!!!'
+                    });
+                }
+            });
+        });
+
+
+    </script>
 
 
     <script src="./final.js"></script>

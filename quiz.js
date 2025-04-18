@@ -25,6 +25,21 @@ imgBt.forEach(img => {
 
 });
 
+let bar = document.querySelectorAll(".bar")
+
+bar.forEach(div => {
+    div.onmouseover = () => {
+        div.style.transform = "scale(1.2)"
+    }
+
+    div.onmouseout = () => {
+        div.style.transform = ""
+    }
+})
+
+
+
+
 
 
 

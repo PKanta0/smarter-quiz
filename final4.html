@@ -186,6 +186,8 @@
         }
     </style>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 </head>
 
@@ -226,13 +228,13 @@
 
             <div class="mainchoice">
                 <div class="choice">
-                    <div class="bx a"><button>8</button></div>
-                    <div class="bx b"><button>9</button></div>
+                    <div class="a bx"><button class="a" >8</button></div>
+                    <div class="bx"><button>9</button></div>
                 </div>
 
                 <div class="choice">
-                    <div class="bx c"><button>7</button></div>
-                    <div class="bx d"><button>6</button></div>
+                    <div class="bx"><button>7</button></div>
+                    <div class="bx"><button>6</button></div>
                 </div>
             </div>
         </div>
@@ -244,7 +246,38 @@
     </div>
 
 
-    <script src="./final.js"></script>
+    <script>
+
+        let score = parseInt(localStorage.getItem("score")) || 0;
+        document.querySelector(".bar").textContent = `Score ${score} : 5`;
+
+
+        document.querySelectorAll("button").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    if (btn.classList.contains("a")) {
+                        score += 1;
+                        localStorage.setItem("score", score);
+                        Swal.fire({
+                            icon: 'success',
+                            title: '✅ Correct!',
+                            text: 'Good job! Let’s go to the next question.',
+                            confirmButtonText: 'Next'
+                        }).then(() => {
+                            window.location.href = 'final5.html';
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: '❌ I DONT THINK SO! ❌',
+                            text: 'Do it again!!!'
+                        });
+                    }
+                });
+            });
+
+    </script>
+
+    <script src="./quiz.js"></script>
 </body>
 
 </html>
