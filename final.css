@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    background-image: url(https://scontent-ham3-1.xx.fbcdn.net/v/t1.15752-9/491022567_1215110283671823_1830451451226467109_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=K0uPdv7hrj8Q7kNvwHWJwp0&_nc_oc=AdkiPljn8HCHruJxTj-9oEwxpwDZQU5hctoso2rc3RgzqgDC7b6GmHTfVxE1O_0L9LQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-ham3-1.xx&oh=03_Q7cD2AGa_TBAM2cA-TJ31o3DIlWWyxG9Heh2Iyf5enppQ82y2g&oe=6828E81B);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#contrainer {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    flex-direction: column;
+    width: 1000px;
+    height: 500px;
+    box-shadow: 2px 3px 120px 1px black;
+    margin-top: 150px;
+    border-radius: 34px;
+    background-color: #CB6A41;
+    border: 10px solid #EAD4AA;
+
+}
+
+.sour-gummy {
+    font-size: 70px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    color: #EBCBA6
+}
+
+.contrainer-baby {
+    flex: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.contrainer-baby h1 {
+    font-size: 62px;
+}
+
+
+.contrainer-baby1 {
+    flex: 1.7;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.contrainer-baby1-inside {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+
+.img-bt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+
+    transition: all 0.3s ease-in-out;
+
+}
+
+.img,
+.bt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 10px;
+}
+
+.img {
+    flex: 1.6;
+
+}
+
+.bt {
+    flex: 0.4;
+
+}
+
+.bt button {
+    width: 200px;
+    height: 55px;
+    border-radius: 15px;
+    background-color: #3B7478;
+    border: 4px solid #173B40;
+    font-size: 26px;
+    color: #EBCBA6;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+
+
+.img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 34px;
+    box-shadow: 0px 0px 10px 0px black;
+
+}
+
+
