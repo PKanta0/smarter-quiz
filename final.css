@@ -122,6 +122,8 @@ body {
 @media(max-width:900px) {
     body {
         background-size: auto;
+        justify-content: center;
+        align-items: center;
 
     }
 
