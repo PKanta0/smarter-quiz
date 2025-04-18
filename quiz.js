@@ -41,9 +41,3 @@ let home = document.querySelectorAll("button")[4]
 home.style.borderRadius ="25px"
 home.style.border ="0"
 
-
-
-
-
-
-
